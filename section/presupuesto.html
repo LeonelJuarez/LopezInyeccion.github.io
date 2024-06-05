@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa López Inyección - Presupuesto</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>López Inyección</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./registro.html">Registro</a></li>
+                    <li><a href="./agenda.html">Agenda de Turnos</a></li>
+                    <li><a href="./presupuesto.html">Presupuesto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="presupuesto" class="container">
+        <h2>Generar Presupuesto</h2>
+        <form id="registroPresupuestoForm">
+            <h3>Registrar Presupuesto</h3>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="fechaPresupuesto">Fecha:</label>
+                    <input type="date" id="fechaPresupuesto" name="fechaPresupuesto">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="nombreCliente">Nombre del Cliente:</label>
+                    <input type="text" id="nombreCliente" name="nombreCliente">
+                </div>
+                <div class="input-group">
+                    <label for="cuilCliente">CUIL:</label>
+                    <input type="text" id="cuilCliente" name="cuilCliente">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="vehiculoCliente">Vehículo:</label>
+                    <input type="text" id="vehiculoCliente" name="vehiculoCliente">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="trabajosRealizados">Trabajos Realizados:</label>
+                <textarea id="trabajosRealizados" name="trabajosRealizados" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="totalPresupuesto">Total:</label>
+                    <input type="text" id="totalPresupuesto" name="totalPresupuesto">
+                </div>
+            </div>
+            <button type="submit">Registrar Presupuesto</button>
+        </form>
+
+        <h3>Presupuestos Realizados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nombre del Cliente</th>
+                    <th>CUIL</th>
+                    <th>Vehículo</th>
+                    <th>Trabajos Realizados</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-06-01</td>
+                    <td>Juan Pérez</td>
+                    <td>20-12345678-9</td>
+                    <td>Ford Focus</td>
+                    <td>Cambio de aceite, Revisión general</td>
+                    <td>$5,000</td>
+                </tr>
+                <tr>
+                    <td>2024-06-02</td>
+                    <td>Ana Gómez</td>
+                    <td>27-98765432-1</td>
+                    <td>Chevrolet Cruze</td>
+                    <td>Ajuste de frenos, Cambio de bujías</td>
+                    <td>$8,500</td>
+                </tr>
+                <tr>
+                    <td>2024-06-03</td>
+                    <td>Lucas Martínez</td>
+                    <td>23-11223344-5</td>
+                    <td>Volkswagen Golf</td>
+                    <td>Reparación de motor</td>
+                    <td>$15,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Empresa López Inyección</p>
+        </div>
+    </footer>
+</body>
+</html>

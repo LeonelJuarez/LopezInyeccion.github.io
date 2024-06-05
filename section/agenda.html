@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa López Inyección - Agenda de Turnos</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>López Inyección</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./registro.html">Registro</a></li>
+                    <li><a href="./agenda.html">Agenda de Turnos</a></li>
+                    <li><a href="./presupuesto.html">Presupuesto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="agenda" class="container">
+        <h2>Agenda de Turnos</h2>
+        <form id="registroTurnoForm">
+            <h3>Registrar Turno</h3>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="nombreCliente">Nombre:</label>
+                    <input type="text" id="nombreCliente" name="nombreCliente">
+                </div>
+                <div class="input-group">
+                    <label for="apellidoCliente">Apellido:</label>
+                    <input type="text" id="apellidoCliente" name="apellidoCliente">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="telefonoCliente">Teléfono:</label>
+                    <input type="tel" id="telefonoCliente" name="telefonoCliente">
+                </div>
+                <div class="input-group">
+                    <label for="fechaTurno">Fecha del Turno:</label>
+                    <input type="date" id="fechaTurno" name="fechaTurno">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="horaTurno">Hora del Turno:</label>
+                    <input type="time" id="horaTurno" name="horaTurno">
+                </div>
+            </div>
+            <button type="submit">Registrar Turno</button>
+        </form>
+
+        <h3>Turnos Pactados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Teléfono</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>(123) 456-7890</td>
+                    <td>2024-06-10</td>
+                    <td>10:00</td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>Gómez</td>
+                    <td>(123) 456-7891</td>
+                    <td>2024-06-11</td>
+                    <td>11:30</td>
+                </tr>
+                <tr>
+                    <td>Lucas</td>
+                    <td>Martínez</td>
+                    <td>(123) 456-7892</td>
+                    <td>2024-06-12</td>
+                    <td>09:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Empresa López Inyección</p>
+        </div>
+    </footer>
+</body>
+</html>

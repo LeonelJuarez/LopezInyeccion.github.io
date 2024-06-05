@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa López Inyección - Servicios</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>Empresa López Inyección</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./registro.html">Registro</a></li>
+                    <li><a href="./agenda.html">Agenda de Turnos</a></li>
+                    <li><a href="./presupuesto.html">Presupuesto</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="servicios" class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-list">
+            <div class="service-card">
+                <h3>Inyección</h3>
+                <p>Código: 001</p>
+                <p>Servicios de inyección de plásticos con alta precisión y calidad.</p>
+            </div>
+            <div class="service-card">
+                <h3>Diagnóstico</h3>
+                <p>Código: 002</p>
+                <p>Diagnóstico y reparación de motores para todo tipo de vehículos.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mantenimiento preventivo</h3>
+                <p>Código: 003</p>
+                <p>Mantenimiento preventivo para asegurar el correcto funcionamiento del vehículo.</p>
+            </div>
+            <div class="service-card">
+                <h3>Reparación de sistemas de inyección</h3>
+                <p>Código: 004</p>
+                <p>Reparación y ajuste de sistemas de inyección de combustible.</p>
+            </div>
+            <div class="service-card">
+                <h3>Ajuste de frenos</h3>
+                <p>Código: 005</p>
+                <p>Servicios de ajuste y mantenimiento de frenos.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cambio de aceite y filtros</h3>
+                <p>Código: 006</p>
+                <p>Cambio de aceite y filtros para todo tipo de vehículos.</p>
+            </div>
+            <div class="service-card">
+                <h3>Revisión general del vehículo</h3>
+                <p>Código: 007</p>
+                <p>Revisión completa del vehículo para asegurar su buen estado.</p>
+            </div>
+        </div>
+        
+        <h3>Agregar Nuevo Servicio</h3>
+        <form id="agregarServicioForm">
+            <div class="form-group">
+                <label for="codigoServicio">Código del Servicio:</label>
+                <input type="text" id="codigoServicio" name="codigoServicio" required>
+            </div>
+            <div class="form-group">
+                <label for="nombreServicio">Nombre del Servicio:</label>
+                <input type="text" id="nombreServicio" name="nombreServicio" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcionServicio">Descripción del Servicio:</label>
+                <textarea id="descripcionServicio" name="descripcionServicio" rows="4" required></textarea>
+            </div>
+            <button type="submit">Agregar Servicio</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Empresa López Inyección</p>
+        </div>
+    </footer>
+</body>
+</html>
+
