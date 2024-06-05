@@ -191,6 +191,10 @@ table th {
     background-color: #f4f4f4;
 }
 
+#trabajosContainer{
+      margin-left: 2em;
+      margin-bottom: 2em;
+}
 button {
     width: 100%;
     padding: 10px;

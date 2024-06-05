@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa López Inyección - Presupuesto</title>
     <link rel="stylesheet" href="../style/style.css">
+    <script>
+        function agregarTrabajo() {
+            const trabajosContainer = document.getElementById('trabajosContainer');
+            const newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.name = 'trabajosRealizados[]';
+            newInput.placeholder = 'Trabajo a realizar';
+            trabajosContainer.appendChild(newInput);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -12,11 +22,11 @@
             <h1>López Inyección</h1>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./registro.html">Registro</a></li>
-                    <li><a href="./agenda.html">Agenda de Turnos</a></li>
-                    <li><a href="./presupuesto.html">Presupuesto</a></li>
-                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="agenda.html">Agenda de Turnos</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,8 +59,11 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="trabajosRealizados">Trabajos Realizados:</label>
-                <textarea id="trabajosRealizados" name="trabajosRealizados" rows="5"></textarea>
+                <label for="trabajosRealizados">Trabajos a Realizar:</label>
+                <div id="trabajosContainer">
+                    <input type="text" name="trabajosRealizados[]" placeholder="Trabajo a realizar">
+                </div>
+                <button type="button" onclick="agregarTrabajo()">Agregar Trabajo</button>
             </div>
             <div class="form-group">
                 <div class="input-group">
