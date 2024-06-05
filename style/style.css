@@ -160,7 +160,7 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #451bee;
 }
 
 
@@ -195,10 +195,10 @@ table th {
       margin-left: 2em;
       margin-bottom: 2em;
 }
-button {
+/*button {
     width: 100%;
     padding: 10px;
-    /*background-color: #333;*/
+    /*background-color: #333;
     color: white;
     border: none;
     border-radius: 4px;
@@ -207,7 +207,7 @@ button {
 
 button:hover {
     background-color: #555;
-}
+}*/
 
 
 
