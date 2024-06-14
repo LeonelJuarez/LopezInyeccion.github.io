@@ -119,7 +119,7 @@ form h3 {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #2600c0;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
@@ -127,41 +127,125 @@ button {
 }
 
 button:hover {
-    background-color: #0f004d;
+    background-color: #0056b3;
 }
+
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 
 
 /* AgENDA  */
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+/* Estilos para el formulario */
+#registroTurnoForm .form-group {
+    margin-bottom: 20px;
 }
 
-table th, table td {
+#registroTurnoForm .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#registroTurnoForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#registroTurnoForm input,
+#registroTurnoForm textarea {
+    padding: 10px;
     border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-table th {
-    background-color: #f4f4f4;
-}
-
-button {
+    border-radius: 4px;
     width: 100%;
-    padding: 10px;
-    background-color: #2600c0;
-    color: white;
+}
+
+#registroTurnoForm button {
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #451bee;
+#registroTurnoForm button:hover {
+    background-color: #0056b3;
 }
+
+/* Estilos para el calendario */
+#calendario {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#calendario table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#calendario th,
+#calendario td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    vertical-align: top;
+    width: 14.28%; 
+}
+
+#calendario th {
+    background-color: #007bff;
+    color: white;
+}
+
+.dia {
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.dia .fecha {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.dia .turno {
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 2px 4px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+.dia .turno p {
+    margin: 0;
+    color: #007bff;
+}
+#calendario .domingo {
+    background-color: #ffcccc;
+    border: 1px solid #ff9999;
+}
+
+#calendario .sabado {
+    background-color: #ffffcc;
+    border: 1px solid #ffcc00;
+}
+
+
 
 
 /* Presupuesto */

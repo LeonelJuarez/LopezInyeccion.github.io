@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="registro.html">Registro</a></li>
-                    <li><a href="./agenda.html">Agenda de Turnos</a></li>
+                    <li><a href="./agenda.html">Turnos</a></li>
                     <li><a href="./presupuesto.html">Presupuesto</a></li>
                     <li><a href="./servicios.html">Servicios</a></li>
                 </ul>
@@ -23,22 +23,23 @@
     </header>
     
     <section id="registro" class="container">
-        <h2>Registro de Clientes</h2>
         <form>
             <h3>Registrar Cliente</h3>
             <div class="form-group">
                 <div class="input-group">
-                    <label for="nombreCliente">Nombre:</label>
-                    <input type="text" id="nombreCliente" name="nombreCliente">
+                    <label for="dni">DNI:</label>
+                    <input type="number" id="dni" name="dni">
                 </div>
                 <div class="input-group">
                     <label for="apellidoCliente">Apellido:</label>
                     <input type="text" id="apellidoCliente" name="apellidoCliente">
                 </div>
                 <div class="input-group">
-                    <label for="dni">DNI:</label>
-                    <input type="number" id="dni" name="dni">
+                    <label for="nombreCliente">Nombre:</label>
+                    <input type="text" id="nombreCliente" name="nombreCliente">
                 </div>
+                
+                
             </div>
             <div class="form-group">
                 <div class="input-group">
@@ -53,17 +54,32 @@
             <div class="form-group">
                 <div class="input-group">
                     <label for="marcaAuto">Marca del Auto:</label>
-                    <input type="text" id="marcaAuto" name="marcaAuto">
+                    <select id="marcaAuto" name="marcaAuto">
+                        <option value="">----</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                    </select>
                 </div>
                 <div class="input-group">
                     <label for="modeloAuto">Modelo del Auto:</label>
-                    <input type="text" id="modeloAuto" name="modeloAuto">
+                    <select id="modeloAuto" name="modeloAuto">
+                        <option value="">-----</option>
+                        <option value="Uno Cl">Uno Cl</option>
+                        <option value="Duna">Duna</option>
+                        <option value="Siena">Siena</option>
+                        <option value="Toro">Toro</option>
+                        <option value="Mobi Wey">Mobi Wey</option>
+                    </select>
                 </div>
                 <div class="input-group">
                     <label for="patenteAuto">Patente:</label>
                     <input type="text" id="patenteAuto" name="patenteAuto">
                 </div>
             </div>
+            
             <button type="submit">Registrar Cliente</button>
         </form>
     </section>
