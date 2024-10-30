@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa López Inyección - Registro</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="registro.html">Gestionar Clientes</a></li>
                     <li><a href="./agenda.html">Turnos</a></li>
                     <li><a href="./presupuesto.html">Presupuesto</a></li>
                     <li><a href="./servicios.html">Servicios</a></li>
@@ -21,9 +22,9 @@
             </nav>
         </div>
     </header>
-    
-    <section id="registro" class="container">
-        <form>
+    <main>
+        <section id="registro" class="container">
+        <form id="register-client-form">
             <h3>Registrar Cliente</h3>
             <div class="form-group">
                 <div class="input-group">
@@ -81,13 +82,109 @@
             </div>
             
             <button type="submit">Registrar Cliente</button>
+        </form>           
+        </section>
+
+        <section id="registro" class="container">
+        <form id="update-client-form">
+            <h2>Actualizar Cliente</h2>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id">
+                </div>
+                <div class="input-group">
+                    <label for="dni">DNI:</label>
+                    <input type="number" id="dniNew" name="dninEW">
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group">
+                        <label for="nombreCliente">Nombre:</label>
+                        <input type="text" id="nombreClienteNew" name="nombreClienteNew">
+                    </div>
+                    <div class="input-group">
+                        <label for="apellidoCliente">Apellido:</label>
+                        <input type="text" id="apellidoClienteNew" name="apellidoClienteNew">
+                    </div> 
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="emailCliente">Email:</label>
+                    <input type="email" id="emailClienteNew" name="emailClienteNew">
+                </div>
+                <div class="input-group">
+                    <label for="telefonoCliente">Teléfono:</label>
+                    <input type="tel" id="telefonoClienteNew" name="telefonoClienteNew">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <label for="marcaAuto">Marca del Auto:</label>
+                    <select id="marcaAutoNew" name="marcaAutoNew">
+                        <option value="">----</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="modeloAuto">Modelo del Auto:</label>
+                    <select id="modeloAutoNew" name="modeloAutoNew">
+                        <option value="">-----</option>
+                        <option value="Uno Cl">Uno Cl</option>
+                        <option value="Duna">Duna</option>
+                        <option value="Siena">Siena</option>
+                        <option value="Toro">Toro</option>
+                        <option value="Mobi Wey">Mobi Wey</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="patenteAuto">Patente:</label>
+                    <input type="text" id="patenteAutoNew" name="patenteAutoNew">
+                </div>
+            </div>
+            <button type="submit">Actualizar Cliente</button>
         </form>
-    </section>
+        </section>
+
+        <section class="container"> 
+        <h3>Lista de clientes</h3>
+        <table id="tablaClientes">
+            <button id="lista">Listar de clientes</button>
+        <thead>
+            <tr>
+                <!--<th>ID</th>-->
+                <th>DNI</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Marca de Vehículo</th>
+                <th>Modelo de Vehículo</th>
+                <th>Patente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos se agregarán aquí -->
+        </tbody>
+        </table>
+        </section>
+    </main>
+
 
     <footer>
         <div class="container">
             <span>&copy; 2024 Empresa López Inyección</span>
         </div>
     </footer>
+    
+    <script src="../script/registroC.js"></script>
 </body>
 </html>

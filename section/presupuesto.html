@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa López Inyección - Presupuesto</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../style/style.css">   
 </head>
 <body>
@@ -13,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./registro.html">Registro</a></li>
+                    <li><a href="./registro.html">Gestionar Clientes</a></li>
                     <li><a href="./agenda.html">Turnos</a></li>
                     <li><a href="./presupuesto.html">Presupuesto</a></li>
                     <li><a href="./servicios.html">Servicios</a></li>
@@ -21,8 +22,8 @@
             </nav>
         </div>
     </header>
-    
-    <section id="presupuesto" class="container">
+    <main>
+        <section id="presupuesto" class="container">
         
         <form id="registroPresupuestoForm">
             <h3>Generar Presupuesto</h3>
@@ -34,75 +35,57 @@
             </div>
             <div class="form-group">
                 <div class="input-group">
-                    <label for="cuilCliente">DNI:</label>
-                    <input type="text" id="cuilCliente" name="cuilCliente">
+                    <label for="dniCliente">DNI:</label>
+                    <input type="text" id="dniCliente" name="dniCliente">
                 </div>
-                <div class="input-group">
-                    <label for="nombreCliente">Apellido del Cliente:</label>
-                    <input type="text" id="apellidoCliente" name="nombreCliente">
+            </div>
+            <div class="form-group">
+                <label for="trabajosRealizados">Servicio a Realizar:</label>
+                <div id="trabajosContainer">
+                    <input type="text" name="trabajosRealizados[]" placeholder="ID servicio">
+                    <button type="button" onclick="agregarTrabajo()">Agregar Servicio</button>
                 </div>
                 
             </div>
             <div class="form-group">
                 <div class="input-group">
-                    <label for="vehiculoCliente">Vehículo:</label>
-                    <input type="text" id="vehiculoCliente" name="vehiculoCliente">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="trabajosRealizados">Trabajos a Realizar:</label>
-                <div id="trabajosContainer">
-                    <input type="text" name="trabajosRealizados[]" placeholder="Trabajo a realizar">
-                </div>
-                <button type="button" onclick="agregarTrabajo()">Agregar Trabajo</button>
-            </div>
-            <div class="form-group">
-                <div class="input-group">
                     <label for="totalPresupuesto">Total:</label>
-                    <input type="text" id="totalPresupuesto" name="totalPresupuesto">
+                    <span id="totalPresupuesto">$</span>
                 </div>
             </div>
             <p>*Validez 10 dias desde que se genera el presupuesto</p>
             <button type="submit">Generar Presupuesto</button>
         </form>
 
-    </section>
+        </section>
 
+        <section class="container">
+            <h3>Listar Presupuesto</h3>
+            <table id="tablaPresupuesto">
+                <button id="listaPresupuesto">Listar Presupuesto</button>
+            <thead>
+                <tr>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Marca de Vehículo</th>
+                    <th>Patente</th>
+                    <th>Servicios</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se agregarán aquí -->
+            </tbody>
+            </table>
+        </section>
+    </main>
     <footer>
         <div class="container">
             <p>&copy; 2024 Empresa López Inyección</p>
         </div>
     </footer>
 
-    <script>
-
-        // Boton de agregar trabajos
-        function agregarTrabajo() {
-            const trabajosContainer = document.getElementById('trabajosContainer');
-            const newInput = document.createElement('input');
-            newInput.type = 'text';
-            newInput.name = 'trabajosRealizados[]';
-            newInput.placeholder = 'Trabajo a realizar';
-            trabajosContainer.appendChild(newInput);
-        }
-        
-    
-        //Fecha actual
-    var fechaActualSpan = document.getElementById('fechaActual'); 
-    function obtenerFechaActual() {
-        var fecha = new Date();
-        var dia = fecha.getDate();
-        var mes = fecha.getMonth() + 1; // Los meses van de 0 a 11 en JavaScript
-        var anio = fecha.getFullYear();
-
-        
-        var fechaFormateada = (dia < 10 ? '0' + dia : dia) + "/" + (mes < 10 ? '0' + mes : mes) + "/" + anio ;
-
-        return fechaFormateada;
-    }
-    fechaActualSpan.textContent = obtenerFechaActual();
-
-
-    </script>
+    <script src="../script/presupuesto.js"></script>
 </body>
 </html>
